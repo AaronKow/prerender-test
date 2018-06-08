@@ -1,0 +1,34 @@
+{
+  "name": "prerender-test",
+  "version": "0.0.1",
+  "description": "Test for prerender",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronKow/prerender-test.git"
+  },
+  "author": "Aaron Kow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AaronKow/prerender-test/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "^2.29.0",
+    "prerender-loader": "^1.0.0",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
