@@ -20,3 +20,6 @@ const $app = document.querySelector("#app");
     init($app);
 });
 ```
+
+## Reference
+- [Add more .html files in html-webpack-plugin](https://extri.co/2017/07/11/generating-multiple-html-pages-with-htmlwebpackplugin/)
