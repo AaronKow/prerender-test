@@ -4,6 +4,7 @@
   "description": "Test for prerender",
   "main": "src/index.js",
   "scripts": {
+    "dev": "rm -rf dist && webpack --watch",
     "build": "rm -rf dist && webpack"
   },
   "repository": {

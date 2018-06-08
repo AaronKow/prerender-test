@@ -13,11 +13,34 @@ var path = require('path'),
 /* ENTRY FILES */
 const entry = './src/index.js',
 
+    minify = {
+        collapseBooleanAttributes: true,
+        collapseWhitespace: true,
+        decodeEntities: true,
+        html5: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeOptionalTags: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeTagWhitespace: true,
+        sortAttributes: true,
+        sortClassName: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+    },
+
 
     /* PLUGINS List */
     plugins = [
         // for js
         new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
             comments: false,
             mangle: true,
             compress: {
@@ -25,30 +48,16 @@ const entry = './src/index.js',
             }
         }),
 
-      // for html
-      new HTMLWebpackPlugin({
+        // for html
+        new HTMLWebpackPlugin({
             template: 'index.html',
-            minify: {
-                collapseBooleanAttributes: true,
-                collapseWhitespace: true,
-                decodeEntities: true,
-                html5: true,
-                minifyCSS: true,
-                minifyJS: true,
-                processConditionalComments: true,
-                removeAttributeQuotes: true,
-                removeComments: true,
-                removeEmptyAttributes: true,
-                removeOptionalTags: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                removeTagWhitespace: true,
-                sortAttributes: true,
-                sortClassName: true,
-                trimCustomFragments: true,
-                useShortDoctype: true
-            }
+            filename: 'index.html',
+            minify: minify
+        }),
+        new HTMLWebpackPlugin({
+            template: 'index-2.html',
+            filename: 'index-2.html',
+            minify: minify
         })
     ];
 

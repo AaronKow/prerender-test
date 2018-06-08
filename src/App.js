@@ -1,6 +1,6 @@
 // Modules
 import React from 'react';
-import { render, renderToString } from 'react-dom';
+import { render } from 'react-dom';
 
 
 export default class App extends React.Component {
@@ -10,3 +10,7 @@ export default class App extends React.Component {
         );
     }
 }
+
+// export default function init($node) {
+//     render(<App/>, $node);
+// }

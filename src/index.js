@@ -7,5 +7,19 @@ import { render } from 'react-dom';
 import App from './App';
 
 
-const $node = document.querySelector("#app");
-!!$node && render(<App />, $node);
+// Working
+const app = document.querySelector("#app");
+!!app && render(<App />, app);
+
+// Not working
+// window.onload = () => {
+//     const $app = document.querySelector("#app");
+//     render(<App />, $app);
+// }
+
+// Not working
+// const $app = document.querySelector("#app");
+// !!$app && import(/* webpackChunkName: "app" */ './App').then(module => {
+//     const init = module.default;
+//     init($app);
+// });
